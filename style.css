@@ -4,6 +4,35 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+.start-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff69b4, #87ceeb); /* Degradê rosa e azul */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff85c1, #add8e6); /* Degradê rosa claro e azul claro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+.hidden {
+    display: none;
+}
+
 .loading-screen, .reveal-screen {
     display: flex;
     justify-content: center;
@@ -28,30 +57,24 @@ body {
     50% { transform: translateY(10px); }
 }
 
-button {
+#story-display {
+    font-size: 20px;
+    color: #fff;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    max-width: 80%;
+    text-align: center;
+    opacity: 10;
+    transition: opacity 1s ease;
 }
 
-button:hover {
-    background-color: #ff85c1;
-}
-
-.hidden {
-    display: none;
+#story-display.show {
+    opacity: 1;
 }
 
 #message-display {
     font-size: 24px;
     line-height: 1.5;
-    opacity: 0;
+    opacity: 10;
     transition: opacity 1s ease, transform 1s ease;
     transform: translateY(20px);
     text-align: center;

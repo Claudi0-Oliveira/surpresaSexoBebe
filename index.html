@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="loading-screen">
+    <!-- Tela de Início -->
+    <div class="start-screen" id="start-screen">
+        <button id="start-button">Iniciar</button>
+    </div>
+
+    <!-- Tela de Carregamento -->
+    <div class="loading-screen hidden" id="loading-screen">
         <img src="images/feto.png" alt="Feto" class="feto-image">
+        <div id="story-display" class="story"></div> <!-- Contêiner para a historinha -->
         <button id="reveal-button" class="hidden">Abrir Surpresa</button>
     </div>
     
-    <div class="reveal-screen" style="display: none;">
+    <!-- Tela de Revelação -->
+    <div class="reveal-screen hidden" id="reveal-screen">
         <img src="images/menina.webp" alt="Menina" class="menina-image">
         <div id="message-display"></div>
     </div>
+
+    <audio id="background-music" loop>
+        <source src="audio/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
     <script src="script.js"></script>
 </body>
