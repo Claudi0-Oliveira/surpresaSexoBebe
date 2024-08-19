@@ -18,10 +18,24 @@ window.onload = function() {
 
     // Texto da historinha, dividido em linhas
     const story = [
-        "O milagre da vida começa com um pequeno coração,",
-        "batendo forte e cheio de esperança.",
-        "Uma jornada incrível se inicia,",
-        "cheia de sonhos, amor e descobertas..."
+        "O milagre da vida é um presente precioso,",
+        "uma celebração do amor e da esperança que transformam nosso mundo.",
+        "Desde o momento em que um pequeno coração começa a bater,",
+        "cada dia é uma promessa de novas descobertas e alegrias.",
+        "Desde o momento em que um pequeno coração começa a bater,",
+        "Estar à espera de uma nova vida é embarcar em uma jornada repleta de beleza,",
+        "força e amor incondicional.",
+        "Cada movimento e cada som são sinais de um novo capítulo,",
+        "onde o amor e a felicidade se entrelaçam de maneiras extraordinárias.",
+        "Ser mãe é experimentar o amor mais puro e a alegria mais genuína,",
+        "é entrar em uma nova fase cheia de maravilhas e crescimento.",
+        "A espera por esse novo ser é uma viagem emocionante,",
+        "iluminada pela esperança e pela magia de trazer uma nova vida ao mundo.",
+        "O momento de dar à luz é um dos maiores dons que a vida pode oferecer,",
+        "um milagre que ilumina o caminho com promessas e sonhos.",
+        "Prepare-se para uma jornada onde cada batida do coração,",
+        "cada descoberta,",
+        "será uma celebração da vida e do amor que transcende tudo."
     ];
     let currentLine = 0;
 
@@ -35,10 +49,10 @@ window.onload = function() {
                 if (charIndex < story[currentLine].length) {
                     storyDisplay.textContent += story[currentLine][charIndex];
                     charIndex++;
-                    setTimeout(typeCharacter, 50); // Velocidade da digitação de cada caractere
+                    setTimeout(typeCharacter, 120); // Velocidade da digitação de cada caractere
                 } else {
                     currentLine++;
-                    setTimeout(typeStoryLine, 1000); // Pausa de 1 segundo entre cada linha
+                    setTimeout(typeStoryLine, 3000); // Pausa de 3 segundos entre cada linha
                 }
             }
 
